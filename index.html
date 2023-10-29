@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAMSUNG AYU</title>
+  <link rel="icon" href="https://logos-world.net/wp-content/uploads/2020/04/Samsung-Logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <script src="/assets/scripts.js"></script>
+</head>
+
+<body>
+  </header>
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">SAMSUNG AYU</h1>
+          <p class="lead text-body-secondary">Penghitung Cepat Laporan Harian Samsung Ayu. Sistem ini dibuat oleh Salman Ananda M.S dikarenakan Ayu Novri Yanti sering mengeluh dan beralasan sedang menghitung harian. Padahal hitungannya tidak seberapa. Oleh karena itu sistem ini dibuat deh.</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Salman Hebat</a>
+            <a href="#" class="btn btn-warning my-2">Ayu Pembohong</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                src="/assets/1.jpeg" alt="">
+              <div class="card-body">
+                <p class="card-text">Hitung Knowledge Disini ya Ayu Sayang</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-success" onclick="hitungKnowledge()">Hitung</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="selesaiKnowledge()">Selesai</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="knowledge p-2 mt-2" style="border: 1px solid gray; border-radius: 10px; display: none;">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nTraining" placeholder="2%">
+                <label for="nTraining">Nilai Training</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="nQC" placeholder="5%">
+                <label for="nQC">Nilai QC</label>
+              </div>
+              <button class="btn btn-success mt-2" style="width: 100%;" onclick="hasilKnowledge()">Hitung</button>
+              <div class="form-floating" id="hasilKnowledge" style="display: none;">
+                <input type="text" class="form-control mt-2" id="nHasil" placeholder="20%">
+                <label for="nHasil">Hasil</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                src="/assets/2.jpeg" alt="">
+              <div class="card-body">
+                <p class="card-text">Hitung Segment Contribution Disini ya Ayu Sayang</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-success" onclick="hitungsc()">Hitung</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="selesaisc()">Selesai</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sc p-2 mt-2" style="border: 1px solid gray; border-radius: 10px; display: none;">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nPRM" placeholder="5000000">
+                <label for="nPRM">Amount PRM</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control mb-3" id="nMMH" placeholder="1200000">
+                <label for="nMMH">Amount MMH</label>
+              </div>
+              <div class="form-floating">
+                <input type="text" class="form-control" id="nTotalHP" placeholder="130000000">
+                <label for="nTotalHP">Total Amount HP</label>
+              </div>
+              <button class="btn btn-success mt-2" style="width: 100%;" onclick="hasilsc()">Hitung</button>
+              <div class="form-floating" id="hasilsc" style="display: none;">
+                <input type="text" class="form-control mt-2" id="nHasilsc" placeholder="0.56">
+                <label for="nHasilsc">Hasil</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                src="/assets/3.jpeg" alt="">
+              <div class="card-body">
+                <p class="card-text">Hitung Productivity Disini ya Ayu Sayang</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-success" onclick="hitungprd()">Hitung</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="selesaiprd()">Selesai</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prd p-2 mt-2" style="border: 1px solid gray; border-radius: 10px; display: none;">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="nTerjual" placeholder="54">
+                <label for="nTerjual">Jumlah HP Terjual</label>
+              </div>
+              <div class="form-floating">
+                <input type="number" class="form-control mb-3" id="nTarget" placeholder="90">
+                <label for="nTarget">Jumlah Target</label>
+              </div>
+              <button class="btn btn-success mt-2" style="width: 100%;" onclick="hasilprd()">Hitung</button>
+              <div class="form-floating" id="hasilprd" style="display: none;">
+                <input type="text" class="form-control mt-2" id="nHasilprd" placeholder="12%">
+                <label for="nHasilprd">Hasil</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                src="/assets/4.jpeg" alt="">
+              <div class="card-body">
+                <p class="card-text">Hitung ASP U&E Disini ya Ayu Sayang</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-success" onclick="hitungue()">Hitung</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="selesaiue()">Selesai</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ue p-2 mt-2" style="border: 1px solid gray; border-radius: 10px; display: none;">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nJumlahUE" placeholder="5400000">
+                <label for="nJumlahUE">Jumlah Amount U&E</label>
+              </div>
+              <div class="form-floating">
+                <input type="number" class="form-control mb-3" id="nqtyUE" placeholder="90">
+                <label for="nqtyUE">Quantity U&E</label>
+              </div>
+              <button class="btn btn-success mt-2" style="width: 100%;" onclick="hasilue()">Hitung</button>
+              <div class="form-floating" id="hasilue" style="display: none;">
+                <input type="text" class="form-control mt-2" id="nHasilue" placeholder="12%">
+                <label for="nHasilue">Hasil</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                src="/assets/5.jpeg" alt="">
+              <div class="card-body">
+                <p class="card-text">Hitung ASP MMH Disini ya Ayu Sayang</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-success" onclick="hitungmmh()">Hitung</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary" onclick="selesaimmh()">Selesai</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mmh p-2 mt-2" style="border: 1px solid gray; border-radius: 10px; display: none;">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nJumlahMMH" placeholder="5400000">
+                <label for="nJumlahMMH">Jumlah Amount MMH</label>
+              </div>
+              <div class="form-floating">
+                <input type="number" class="form-control mb-3" id="nqtyMMH" placeholder="90">
+                <label for="nqtyMMH">Quantity MMH</label>
+              </div>
+              <button class="btn btn-success mt-2" style="width: 100%;" onclick="hasilmmh()">Hitung</button>
+              <div class="form-floating" id="hasilmmh" style="display: none;">
+                <input type="text" class="form-control mt-2" id="nHasilmmh" placeholder="12%">
+                <label for="nHasilmmh">Hasil</label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="result p-2 mt-2" style="border: 1px solid gray; border-radius: 10px;">
+              <h5 class="m-2">Total Keseluruhan</h5>
+              <div class="form-floating" id="hasilKnowledge">
+                <input type="text" class="form-control mt-2" id="nHasil1" placeholder="20%">
+                <label for="nHasil1">Hasil Knowledge</label>
+              </div>
+              <div class="form-floating" id="hasilsc">
+                <input type="text" class="form-control mt-2" id="nHasilsc1" placeholder="0.56">
+                <label for="nHasilsc1">Hasil Segment Contribution</label>
+              </div>
+              <div class="form-floating" id="hasilprd">
+                <input type="text" class="form-control mt-2" id="nHasilprd1" placeholder="12%">
+                <label for="nHasilprd1">Hasil Productivity</label>
+              </div>
+              <div class="form-floating" id="hasilue">
+                <input type="text" class="form-control mt-2" id="nHasilue1" placeholder="12%">
+                <label for="nHasilue1">Hasil ASP U&E</label>
+              </div>
+              <div class="form-floating" id="hasilmmh">
+                <input type="text" class="form-control mt-2" id="nHasilmmh1" placeholder="12%">
+                <label for="nHasilmmh1">Hasil ASP MMH</label>
+              </div>
+              <button class="btn btn-success mt-2" style="width: 100%;" onclick="hasilTotal()">Total</button>
+              <div class="form-floating" id="hasilAll" style="display: none;">
+                <input type="text" class="form-control mt-2" id="nHasilTotal" placeholder="54%">
+                <label for="nHasilTotal">Hasil Total</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-body-secondary py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">Copyright © Salman Corp</p>
+      <p class="mb-0">Want a some system? <a href="https://www.instagram.com/salmanananda.ms/?next=%2F&hl=en">Message my instagram</a> or email <span style="color: blue;">salmanananda.ms@gmail.com</span> </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
